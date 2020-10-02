@@ -26,4 +26,18 @@ exports.max = function max(array) {
     }
 };
 
-exports.avg = function avg(array) {};
+exports.avg = function avg(array) {
+    if (typeof array != "undefined") {
+        if (array.length != 0) {
+            return (
+                array.reduce(function (acc, cV) {
+                    return acc + cV;
+                }) / array.length
+            );
+        } else {
+            return 0;
+        }
+    } else {
+        return 0;
+    }
+};
